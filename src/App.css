@@ -1,0 +1,42 @@
+.App {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /* Default to full height sections */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Utility to center 3D canvas absolutey */
+.canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Behind text by default if z-index of text is higher */
+}
+
+.content-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    pointer-events: none;
+    /* Let clicks pass through to 3D if needed, enable on interactive children */
+}
+
+.content-container>* {
+    pointer-events: auto;
+}
