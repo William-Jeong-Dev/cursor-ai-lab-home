@@ -18,7 +18,7 @@ function DataVein({ points, speed = 1, thickness = 0.2, color = '#ff3b30' }) {
         ctx.fillStyle = grad; ctx.fillRect(0, 0, 1024, 1024);
         const tex = new THREE.CanvasTexture(canvas); tex.wrapS = tex.wrapT = THREE.RepeatWrapping; return tex;
     }, [color]);
-    return (<mesh geometry={geometry}><meshBasicMaterial ref={materialRef} map={flowTexture} transparent opacity={0.6} blending={THREE.AdditiveBlending} side={THREE.DoubleSide}/></mesh>)
+    return (<mesh geometry={geometry}><meshBasicMaterial ref={materialRef} map={flowTexture} transparent opacity={0.6} blending={THREE.AdditiveBlending} side={THREE.DoubleSide} /></mesh>)
 }
 
 export default function HeroSection() {
@@ -46,7 +46,7 @@ export default function HeroSection() {
                     marginBottom: '20px',
                     wordBreak: 'keep-all'
                 }}>
-                    DEFY GRAVITY.
+                    GRAVITY.
                 </h1>
                 <p style={{
                     fontSize: 'clamp(1rem, 4vw, 1.5rem)',
